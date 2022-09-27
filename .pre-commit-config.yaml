@@ -1,8 +1,8 @@
 exclude: '^docs/conf.py'
 
 repos:
-- repo: git://github.com/pre-commit/pre-commit-hooks
-  rev: v4.1.0
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.3.0
   hooks:
   # whitespace
   - id: trailing-whitespace
@@ -33,23 +33,23 @@ repos:
   - id: fix-encoding-pragma
 
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.7.1
+    rev: v3.8.3
     hooks:
     -   id: reorder-python-imports
 
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.12
+  rev: v1.3.1
   hooks:
     - id: remove-tabs
       exclude: '.*\.(svg)$'
 
 - repo: https://github.com/pre-commit/mirrors-autopep8
-  rev: 'v1.6.0'
+  rev: 'v1.7.0'
   hooks:
     - id: autopep8
 
 - repo: https://github.com/PyCQA/bandit
-  rev: 1.7.2
+  rev: 1.7.4
   hooks:
     - id: bandit
 
@@ -65,7 +65,7 @@ repos:
       args: ["--max-line-length", "150"]
 
 - repo: https://github.com/PyCQA/flake8
-  rev: 4.0.1
+  rev: 5.0.4
   hooks:
   - id: flake8
   ## You can add flake8 plugins via `additional_dependencies`:
