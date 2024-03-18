@@ -70,7 +70,7 @@ class TestCPU(testtools.TestCase):
 
     def test_get_cpu_path(self):
         with mock.patch(
-                'arbiterd.common.filesystem.get_sys_fs_mount') as sys_mock,\
+                'arbiterd.common.filesystem.get_sys_fs_mount') as sys_mock, \
             mock.patch(
                 'arbiterd.common.cpu.exists', return_value=True):
             sys_mock.return_value = '/sys'
