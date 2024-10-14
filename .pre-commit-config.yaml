@@ -2,7 +2,7 @@ exclude: '^docs/conf.py'
 
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.3.0
+  rev: v5.0.0
   hooks:
   # whitespace
   - id: trailing-whitespace
@@ -32,40 +32,40 @@ repos:
   - id: double-quote-string-fixer
   - id: fix-encoding-pragma
 
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.8.3
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.14.0
     hooks:
     -   id: reorder-python-imports
 
 - repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.3.1
+  rev: v1.5.5
   hooks:
     - id: remove-tabs
       exclude: '.*\.(svg)$'
 
-- repo: https://github.com/pre-commit/mirrors-autopep8
-  rev: 'v1.7.0'
+- repo: https://github.com/hhatto/autopep8
+  rev: 'v2.3.1'
   hooks:
     - id: autopep8
 
 - repo: https://github.com/PyCQA/bandit
-  rev: 1.7.4
+  rev: 1.7.10
   hooks:
     - id: bandit
 
 - repo: https://github.com/tox-dev/tox-ini-fmt
-  rev: 0.5.2
+  rev: 1.4.1
   hooks:
     - id: tox-ini-fmt
 
 - repo: https://opendev.org/openstack/bashate
-  rev: 2.1.0
+  rev: 2.1.1
   hooks:
     - id: bashate
       args: ["--max-line-length", "150"]
 
 - repo: https://github.com/PyCQA/flake8
-  rev: 5.0.4
+  rev: 7.1.1
   hooks:
   - id: flake8
   ## You can add flake8 plugins via `additional_dependencies`:
